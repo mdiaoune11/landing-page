@@ -46,6 +46,7 @@ const translations = {
         "prospects.placed": "PLACED",
         "prospects.available": "AVAILABLE",
         "prospects.viewReport": "View Full Report",
+        "prospects.seeAll": "See All Profiles",
         
         // Success
         "success.title": "From African Courts to Global Stages",
@@ -126,6 +127,7 @@ const translations = {
         "prospects.placed": "COLOCADO",
         "prospects.available": "DISPONIBLE",
         "prospects.viewReport": "Ver Informe Completo",
+        "prospects.seeAll": "Ver Todos los Perfiles",
         
         // Success
         "success.title": "De las Canchas Africanas a los Escenarios Globales",
@@ -206,6 +208,7 @@ const translations = {
         "prospects.placed": "PLACÉ",
         "prospects.available": "DISPONIBLE",
         "prospects.viewReport": "Voir le Rapport Complet",
+        "prospects.seeAll": "Voir Tous les Profils",
         
         // Success
         "success.title": "Des Terrains Africains aux Scènes Mondiales",
