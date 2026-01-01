@@ -182,79 +182,32 @@
         <section class="prospects section bg-gray" id="players">
             <div class="container">
                 <h2 class="section-title text-center" data-i18n="prospects.title">Elite African Prospects</h2>
-                <div class="prospects-grid grid">
-                    <!-- Prospect 1 -->
-                    <div class="prospect-card">
-                        <div class="prospect-img-container">
-                            <img src="moussadrabo.jpg" alt="Moussa Drabo" class="prospect-img">
-                            <div class="prospect-badge badge-placed" data-i18n="prospects.placed">PLACED</div>
-                        </div>
-                        <div class="prospect-data">
-                            <h3 class="prospect-name">Moussa Drabo</h3>
-                            <p class="prospect-meta">Ivory Coast | PF</p>
-                            <div class="prospect-rating">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-line"></i>
-                            </div>
-                            <div class="prospect-stats">
-                                <span>Height: 205 cm</span>
-                                <span>Wingspan: 212 cm</span>
-                            </div>
-                            <a href="#" class="btn btn-secondary btn-small" data-i18n="prospects.viewReport">View Full Report</a>
-                        </div>
-                    </div>
-                    <!-- Prospect 2 -->
-                    <div class="prospect-card">
-                        <div class="prospect-img-container">
-                            <img src="awabathe.jpg" alt="Awa Bathe" class="prospect-img">
-                            <div class="prospect-badge badge-available" data-i18n="prospects.available">AVAILABLE</div>
-                        </div>
-                        <div class="prospect-data">
-                            <h3 class="prospect-name">Awa Bathe</h3>
-                            <p class="prospect-meta">Mali | SG</p>
-                            <div class="prospect-rating">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-line"></i>
-                            </div>
-                            <div class="prospect-stats">
-                                <span>Height: 165 cm</span>
-                                <span>Wingspan: 175 cm</span>
-                            </div>
-                            <a href="#" class="btn btn-secondary btn-small" data-i18n="prospects.viewReport">View Full Report</a>
-                        </div>
-                    </div>
-                    <!-- Prospect 3 -->
-                    <div class="prospect-card">
-                        <div class="prospect-img-container">
-                            <img src="daoudadoumbia.jpg" alt="Daouda Doumbia" class="prospect-img">
-                            <div class="prospect-badge badge-placed" data-i18n="prospects.placed">PLACED</div>
-                        </div>
-                        <div class="prospect-data">
-                            <h3 class="prospect-name">Daouda Doumbia</h3>
-                            <p class="prospect-meta">Mali | PF</p>
-                            <div class="prospect-rating">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-line"></i>
-                            </div>
-                            <div class="prospect-stats">
-                                <span>Height: 190 cm</span>
-                                <span>Wingspan: 199 cm</span>
-                            </div>
-                            <a href="#" class="btn btn-secondary btn-small" data-i18n="prospects.viewReport">View Full Report</a>
-                        </div>
+                <div class="prospects-grid grid" id="prospects-container">
+                    <!-- Prospects will be injected here by script.js -->
+                    <div class="news-loader text-center py-10">
+                        <i class="ri-loader-4-line animate-spin text-3xl text-orange-500"></i>
+                        <p class="text-neutral-500 mt-2">Loading prospects...</p>
                     </div>
                 </div>
-                <div class="prospects-cta">
-                    <a href="https://app.metaafricasports.com" class="btn btn-primary" data-i18n="prospects.seeAll">See All Profiles</a>
+                <div class="prospects-cta text-center mt-10">
+                    <a href="https://app.metaafricasports.com/en/players" class="btn btn-secondary" id="see-all-profiles" data-i18n="prospects.seeAll">See All Profiles</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News Section -->
+        <section class="news section bg-white" id="news">
+            <div class="container">
+                <h2 class="section-title text-center" data-i18n="news.title">Latest News & Updates</h2>
+                <div class="news-grid grid" id="news-container">
+                    <!-- News articles will be injected here by script.js -->
+                    <div class="news-loader text-center py-10">
+                        <i class="ri-loader-4-line animate-spin text-3xl text-orange-500"></i>
+                        <p class="text-neutral-500 mt-2">Loading latest news...</p>
+                    </div>
+                </div>
+                <div class="news-cta text-center mt-10">
+                    <a href="https://app.metaafricasports.com/news" class="btn btn-secondary" data-i18n="news.viewAll">View All News</a>
                 </div>
             </div>
         </section>
@@ -266,7 +219,7 @@
                 <div class="success-data">
                     <div class="success-stats grid">
                         <div class="stat-item">
-                            <span class="stat-number">10+</span>
+                            <span class="stat-number">30+</span>
                             <span class="stat-label" data-i18n="success.playersPlaced">Players Placed</span>
                         </div>
                         <div class="stat-item">
@@ -274,7 +227,7 @@
                             <span class="stat-label" data-i18n="success.countriesCovered">Countries Covered</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">10+</span>
+                            <span class="stat-number">50+</span>
                             <span class="stat-label" data-i18n="success.scholarships">In Scholarships</span>
                         </div>
                     </div>

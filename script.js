@@ -62,6 +62,12 @@ const translations = {
         "cta.title": "Feedback & Partnerships",
         "cta.description": "We are always looking to expand our network. Reach out to us for partnership inquiries or to share your feedback on our mission.",
         "cta.button": "Send Us An Email",
+
+        // News
+        "news.title": "Latest News & Updates",
+        "news.viewAll": "View All News",
+        "news.readMore": "Read More",
+        "news.readSource": "Read Source",
         
         // Privacy
         "privacy.title": "Privacy Policy",
@@ -143,6 +149,12 @@ const translations = {
         "cta.title": "Comentarios y Asociaciones",
         "cta.description": "Siempre estamos buscando expandir nuestra red. Contáctanos para consultas de asociación o para compartir tus comentarios sobre nuestra misión.",
         "cta.button": "Envíanos un Correo",
+
+        // News
+        "news.title": "Últimas Noticias y Actualizaciones",
+        "news.viewAll": "Ver Todas las Noticias",
+        "news.readMore": "Leer Más",
+        "news.readSource": "Leer Fuente",
         
         // Privacy
         "privacy.title": "Política de Privacidad",
@@ -224,6 +236,12 @@ const translations = {
         "cta.title": "Commentaires et Partenariats",
         "cta.description": "Nous cherchons toujours à élargir notre réseau. Contactez-nous pour des demandes de partenariat ou pour partager vos commentaires sur notre mission.",
         "cta.button": "Envoyez-nous un Email",
+
+        // News
+        "news.title": "Dernières Nouvelles",
+        "news.viewAll": "Voir Toutes les Nouvelles",
+        "news.readMore": "Lire la Suite",
+        "news.readSource": "Lire la Source",
         
         // Privacy
         "privacy.title": "Politique de Confidentialité",
@@ -291,6 +309,18 @@ function setLanguage(lang) {
     
     // Update html lang attribute
     document.documentElement.lang = lang;
+
+    // Update See All Profiles link
+    const seeAllBtn = document.getElementById('see-all-profiles');
+    if (seeAllBtn) {
+        seeAllBtn.href = `https://app.metaafricasports.com/${lang}/players`;
+    }
+
+    // Update View All News link
+    const viewAllNewsBtn = document.querySelector('.news-cta a');
+    if (viewAllNewsBtn) {
+        viewAllNewsBtn.href = `https://app.metaafricasports.com/${lang}/news`;
+    }
 }
 
 function toggleDropdown() {
@@ -309,9 +339,155 @@ function closeDropdown() {
     }
 }
 
+/* =============== NEWS FEED =============== */
+const SUPABASE_URL = 'https://qkauaicionthtpmsmizo.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFrYXVhaWNpb250aHRwbXNtaXpvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE0NjAyMTYsImV4cCI6MjA3NzAzNjIxNn0.hjdcRjohuYK3_HaW7qMoLFqENC6iSeaCs7kdYOMQZ1g';
+
+async function fetchLatestNews() {
+    const container = document.getElementById('news-container');
+    if (!container) return;
+
+    if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+        container.innerHTML = '<p class="text-center py-10 text-neutral-500">Please configure Supabase URL and Anon Key in script.js to see news.</p>';
+        return;
+    }
+
+    try {
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/news?select=*,news_likes(count),news_comments(count)&is_published=eq.true&order=created_at.desc&limit=3`, {
+            headers: {
+                'apikey': SUPABASE_ANON_KEY,
+                'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+            }
+        });
+
+        if (!response.ok) throw new Error('Failed to fetch news');
+
+        const news = await response.json();
+        
+        if (news.length === 0) {
+            container.innerHTML = '<p class="text-center py-10 text-neutral-500">No news updates available at this time.</p>';
+            return;
+        }
+
+        container.innerHTML = news.map(article => {
+            const likeCount = article.news_likes?.[0]?.count || 0;
+            const commentCount = article.news_comments?.[0]?.count || 0;
+            const articleUrl = article.source_url || `https://app.metaafricasports.com/${currentLang}/news/${article.id}`;
+
+            return `
+                <a href="${articleUrl}" target="_blank" class="news-card">
+                    <div class="news-img-container">
+                        ${article.image_url 
+                            ? `<img src="${article.image_url}" alt="${article.title}" class="news-img">`
+                            : `<i class="ri-basketball-line text-4xl text-neutral-300"></i>`
+                        }
+                    </div>
+                    <div class="news-data">
+                        <div class="news-interactions">
+                            <span class="news-interaction-item">
+                                <i class="ri-heart-line"></i> ${likeCount}
+                            </span>
+                            <span class="news-interaction-item">
+                                <i class="ri-message-3-line"></i> ${commentCount}
+                            </span>
+                        </div>
+                        <h3 class="news-title">${article.title}</h3>
+                        <p class="news-summary">${(article.summary || '').substring(0, 120)}${(article.summary || '').length > 120 ? '...' : ''}</p>
+                        <span class="news-link">
+                            ${translations[currentLang]['news.readMore']} <i class="ri-arrow-right-line"></i>
+                        </span>
+                    </div>
+                </a>
+            `;
+        }).join('');
+
+    } catch (error) {
+        console.error('News fetch error:', error);
+        container.innerHTML = '<p class="text-center py-10 text-neutral-500">Could not load news at this time. Check back later!</p>';
+    }
+}
+
+/* =============== PROSPECTS FEED =============== */
+async function fetchLatestProspects() {
+    const container = document.getElementById('prospects-container');
+    if (!container) return;
+
+    try {
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/players?select=*&is_published=eq.true&order=created_at.desc&limit=6`, {
+            headers: {
+                'apikey': SUPABASE_ANON_KEY,
+                'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+            }
+        });
+
+        if (!response.ok) throw new Error('Failed to fetch prospects');
+
+        const players = await response.json();
+        
+        if (players.length === 0) {
+            container.innerHTML = '<p class="text-center py-10 text-neutral-500">No prospects available at this time.</p>';
+            return;
+        }
+
+        container.innerHTML = players.map(player => {
+            const statusClass = player.status === 'Placed' ? 'badge-placed' : 'badge-available';
+            const statusKey = player.status === 'Placed' ? 'prospects.placed' : 'prospects.available';
+            const statusText = translations[currentLang][statusKey];
+            
+            // Convert 0-100 rating to 0-5 stars with half-star support
+            const ratingValue = (player.rating || 0) / 20;
+            const fullStars = Math.floor(ratingValue);
+            const hasHalfStar = (ratingValue - fullStars) >= 0.25 && (ratingValue - fullStars) < 0.75;
+            const extraFullStar = (ratingValue - fullStars) >= 0.75 ? 1 : 0;
+            
+            let starsHtml = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= fullStars + extraFullStar) {
+                    starsHtml += '<i class="ri-star-fill"></i>';
+                } else if (i === fullStars + extraFullStar + 1 && hasHalfStar) {
+                    starsHtml += '<i class="ri-star-half-fill"></i>';
+                } else {
+                    starsHtml += '<i class="ri-star-line"></i>';
+                }
+            }
+
+            return `
+                <article class="prospect-card">
+                    <div class="prospect-img-container">
+                        <span class="prospect-badge ${statusClass}" data-i18n="${statusKey}">${statusText}</span>
+                        ${player.profile_picture 
+                            ? `<img src="${player.profile_picture}" alt="${player.first_name} ${player.last_name}" class="prospect-img">`
+                            : `<div class="prospect-img-placeholder flex items-center justify-center bg-neutral-100 h-full">
+                                 <i class="ri-user-line text-6xl text-neutral-300" style="font-size: 5rem; color: #eee; display: flex; align-items: center; justify-content: center; height: 100%;"></i>
+                               </div>`
+                        }
+                    </div>
+                    <div class="prospect-data">
+                        <h3 class="prospect-name">${player.first_name} ${player.last_name}</h3>
+                        <p class="prospect-meta">${player.position_primary} | ${player.height_cm}cm | ${player.country}</p>
+                        <div class="prospect-rating">${starsHtml}</div>
+                        <div class="prospect-stats">
+                            <span>${player.class_year || ''}</span>
+                        </div>
+                        <a href="https://app.metaafricasports.com/${currentLang}/p/${player.id}" target="_blank" class="btn btn-primary btn-small" data-i18n="prospects.viewReport">
+                            ${translations[currentLang]['prospects.viewReport']}
+                        </a>
+                    </div>
+                </article>
+            `;
+        }).join('');
+
+    } catch (error) {
+        console.error('Prospects fetch error:', error);
+        container.innerHTML = '<p class="text-center py-10 text-neutral-500">Could not load prospects at this time. Check back later!</p>';
+    }
+}
+
 // Initialize language on page load
 document.addEventListener('DOMContentLoaded', () => {
     setLanguage(currentLang);
+    fetchLatestNews(); // Fetch news on load
+    fetchLatestProspects(); // Fetch prospects on load
     
     // Toggle dropdown on button click
     const dropdownBtn = document.getElementById('lang-dropdown-btn');
