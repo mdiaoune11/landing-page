@@ -553,6 +553,40 @@ h1, h2, h3 {
     color: var(--charcoal);
 }
 
+/* Rank badges for Top 3 */
+.rank-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--headline-font);
+    font-weight: var(--weight-bold);
+    font-size: 1rem;
+    color: var(--white);
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.rank-1 {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    border: 2px solid #FFD700;
+}
+
+.rank-2 {
+    background: linear-gradient(135deg, #C0C0C0, #A8A8A8);
+    border: 2px solid #C0C0C0;
+}
+
+.rank-3 {
+    background: linear-gradient(135deg, #CD7F32, #B87333);
+    border: 2px solid #CD7F32;
+}
+
 .prospect-data {
     padding: 1.5rem;
 }
