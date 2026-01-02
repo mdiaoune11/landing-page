@@ -47,7 +47,7 @@ const translations = {
         'features.database.title': 'Pan-African Database',
         'features.database.description': 'Discover the next star from Nigeria to Senegal to Angola. We uncover the prospects before they hit the major circuits.',
         // Prospects
-        'prospects.title': 'Top 3 Ranked Players',
+        'prospects.title': 'Top Prospects',
         'prospects.subtitle': 'Our highest-rated basketball prospects',
         'prospects.viewReport': 'View Profile',
         'prospects.seeAll': 'See All Players',
@@ -129,7 +129,7 @@ const translations = {
         'features.database.title': 'Base de Données Panafricaine',
         'features.database.description': 'Découvrez la prochaine star du Nigeria au Sénégal en passant par l\'Angola. Nous découvrons les prospects avant qu\'ils n\'atteignent les grands circuits.',
         // Prospects
-        'prospects.title': 'Top 3 Joueurs',
+        'prospects.title': 'Meilleurs Espoirs',
         'prospects.subtitle': 'Nos prospects les mieux notés',
         'prospects.viewReport': 'Voir le Profil',
         'prospects.seeAll': 'Voir Tous les Joueurs',
@@ -211,7 +211,7 @@ const translations = {
         'features.database.title': 'Base de Datos Panafricana',
         'features.database.description': 'Descubre la próxima estrella desde Nigeria hasta Senegal y Angola. Descubrimos los prospectos antes de que lleguen a los grandes circuitos.',
         // Prospects
-        'prospects.title': 'Top 3 Jugadores',
+        'prospects.title': 'Mejores Prospectos',
         'prospects.subtitle': 'Nuestros prospectos mejor calificados',
         'prospects.viewReport': 'Ver Perfil',
         'prospects.seeAll': 'Ver Todos los Jugadores',
@@ -422,13 +422,9 @@ async function fetchTop3Players() {
                 }
             }
             
-            // Ranking badge (1st, 2nd, 3rd)
-            const rankBadge = `<span class="rank-badge rank-${index + 1}">#${index + 1}</span>`;
-            
             return `
                 <article class="prospect-card">
                     <div class="prospect-img-container">
-                        ${rankBadge}
                         <span class="prospect-badge ${statusClass}" data-i18n="${statusKey}">${statusText}</span>
                         ${player.profile_picture 
                             ? `<img src="${player.profile_picture}" alt="${player.first_name} ${player.last_name}" class="prospect-img">`
