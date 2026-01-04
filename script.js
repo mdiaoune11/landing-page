@@ -323,20 +323,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+/* =============== HELPER: Convert markdown bold to HTML =============== */
+function formatMarkdownText(text) {
+    if (!text) return '';
+    // Convert **text** to <strong>text</strong>
+    return text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+}
+
 /* =============== FETCH LATEST NEWS =============== */
 async function fetchLatestNews() {
     const container = document.getElementById('news-container');
     if (!container) return;
     
     try {
-        const response = await fetch(`${SUPABASE_URL}/rest/v1/news?select=*&is_published=eq.true&order=published_at.desc&limit=3`, {
+        // Query news table, ordered by created_at
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/news?select=*&is_published=eq.true&order=created_at.desc&limit=3`, {
             headers: {
                 'apikey': SUPABASE_ANON_KEY,
                 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
             }
         });
         
-        if (!response.ok) throw new Error('Failed to fetch news');
+        if (!response.ok) {
+            const errorData = await response.json();
+            console.error('Supabase error:', errorData);
+            throw new Error(`Failed to fetch news: ${response.status} ${response.statusText}`);
+        }
         
         const news = await response.json();
         
@@ -346,25 +358,36 @@ async function fetchLatestNews() {
         }
         
         container.innerHTML = news.map(article => {
-            const date = new Date(article.published_at).toLocaleDateString(currentLang === 'en' ? 'en-US' : currentLang === 'fr' ? 'fr-FR' : 'es-ES', {
+            // Use created_at instead of published_at
+            const date = new Date(article.created_at || Date.now()).toLocaleDateString(currentLang === 'en' ? 'en-US' : currentLang === 'fr' ? 'fr-FR' : 'es-ES', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
             });
             
-            // Get localized title and excerpt
-            const title = article[`title_${currentLang}`] || article.title_en || article.title;
-            const excerpt = article[`excerpt_${currentLang}`] || article.excerpt_en || article.excerpt || '';
+            // Get localized title and summary (not excerpt)
+            const title = currentLang === 'es' ? (article.title_es || article.title || '') 
+                        : currentLang === 'fr' ? (article.title_fr || article.title || '') 
+                        : (article.title || '');
+            const rawSummary = currentLang === 'es' ? (article.summary_es || article.summary || '') 
+                             : currentLang === 'fr' ? (article.summary_fr || article.summary || '') 
+                             : (article.summary || '');
+            // Convert markdown bold (**text**) to HTML <strong>
+            const summary = formatMarkdownText(rawSummary);
+            
+            const readMoreText = (translations[currentLang] && translations[currentLang]['news.readMore']) || 'Read More';
             
             return `
                 <article class="news-card">
-                    ${article.image_url ? `<img src="${article.image_url}" alt="${title}" class="news-img">` : ''}
-                    <div class="news-content">
+                    <div class="news-img-container">
+                        ${article.image_url ? `<img src="${article.image_url}" alt="${title.replace(/"/g, '&quot;')}" class="news-img">` : '<i class="ri-newspaper-line" style="font-size: 3rem; color: var(--text-color-light);"></i>'}
+                    </div>
+                    <div class="news-data">
                         <span class="news-date">${date}</span>
                         <h3 class="news-title">${title}</h3>
-                        <p class="news-excerpt">${excerpt}</p>
+                        <p class="news-summary">${summary}</p>
                         <a href="https://app.metaafricasports.com/${currentLang}/news/${article.id}" class="news-link" data-i18n="news.readMore">
-                            ${translations[currentLang]['news.readMore']}
+                            ${readMoreText}
                         </a>
                     </div>
                 </article>

@@ -856,6 +856,15 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
+.news-date {
+    font-size: var(--smaller-size);
+    color: var(--text-color-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
 .news-title {
     font-size: 1.1rem;
     margin-bottom: 0.75rem;
