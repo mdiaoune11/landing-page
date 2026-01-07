@@ -263,7 +263,7 @@ function setLanguage(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
+            el.innerHTML = translations[lang][key];
         }
     });
     
@@ -377,10 +377,13 @@ async function fetchLatestNews() {
             
             const readMoreText = (translations[currentLang] && translations[currentLang]['news.readMore']) || 'Read More';
             
+            const imagePos = article.image_position;
+            const objectPositionStyle = imagePos ? `object-position: ${imagePos.x}% ${imagePos.y}%;` : '';
+            
             return `
                 <article class="news-card">
                     <div class="news-img-container">
-                        ${article.image_url ? `<img src="${article.image_url}" alt="${title.replace(/"/g, '&quot;')}" class="news-img">` : '<i class="ri-newspaper-line" style="font-size: 3rem; color: var(--text-color-light);"></i>'}
+                        ${article.image_url ? `<img src="${article.image_url}" alt="${title.replace(/"/g, '&quot;')}" class="news-img" style="${objectPositionStyle}">` : '<i class="ri-newspaper-line" style="font-size: 3rem; color: var(--text-color-light);"></i>'}
                     </div>
                     <div class="news-data">
                         <span class="news-date">${date}</span>
