@@ -729,6 +729,207 @@ h1, h2, h3 {
     color: var(--text-color);
 }
 
+/* =============== FAQ =============== */
+.faq .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-intro {
+    text-align: center;
+    font-size: 1.0625rem;
+    color: var(--text-color);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.faq-process {
+    margin-bottom: 3rem;
+}
+
+.faq-process:last-of-type {
+    margin-bottom: 0;
+}
+
+.faq-process-title {
+    font-family: var(--headline-font);
+    font-size: var(--h3-size);
+    font-weight: var(--weight-bold);
+    color: var(--charcoal);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--mas-orange);
+}
+
+.faq-phase {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.faq-phase:first-of-type {
+    margin-top: 0;
+}
+
+.faq-phase-title {
+    font-family: var(--headline-font);
+    font-size: 1.25rem;
+    font-weight: var(--weight-bold);
+    color: var(--charcoal);
+    margin-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    border-left: 4px solid var(--mas-orange);
+}
+
+.faq-phase-intro {
+    font-size: var(--normal-size);
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.55;
+}
+
+.faq-key-terms {
+    background: var(--white);
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--mas-orange);
+    margin-bottom: 1.5rem;
+}
+
+.faq-key-terms p {
+    margin-bottom: 0.5rem;
+    font-size: var(--small-size);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.faq-key-terms p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-key-terms strong {
+    color: var(--charcoal);
+}
+
+.faq-block {
+    background: var(--white);
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--mas-orange);
+    margin-top: 1.25rem;
+}
+
+.faq-block-title {
+    font-family: var(--headline-font);
+    font-size: 1.0625rem;
+    font-weight: var(--weight-bold);
+    color: var(--charcoal);
+    margin-bottom: 0.75rem;
+}
+
+.faq-block p {
+    font-size: var(--normal-size);
+    color: var(--text-color);
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+.faq-checklist {
+    list-style: none;
+    padding-left: 0;
+}
+
+.faq-checklist li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 0.4rem;
+    color: var(--text-color);
+}
+
+.faq-checklist li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.875rem;
+    color: var(--mas-orange);
+    font-weight: var(--weight-bold);
+}
+
+.faq-tips-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 0;
+}
+
+.faq-tips-list li {
+    margin-bottom: 0.4rem;
+    color: var(--text-color);
+}
+
+.faq-note-block {
+    margin-top: 1.5rem;
+}
+
+.faq-steps {
+    list-style: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.faq-steps li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.faq-tips {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--mas-orange);
+    margin-top: 1rem;
+}
+
+.faq-tips-title {
+    font-family: var(--headline-font);
+    font-size: 1.125rem;
+    font-weight: var(--weight-bold);
+    color: var(--charcoal);
+    margin-bottom: 0.75rem;
+}
+
+.faq-tips ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.faq-tips li {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.faq-note {
+    font-size: var(--small-size);
+    color: var(--text-color-light);
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .faq .container {
+        padding: 0 1rem;
+    }
+    .faq-process-title {
+        font-size: 1.25rem;
+    }
+    .faq-phase-title {
+        font-size: 1.125rem;
+    }
+}
+
 /* =============== GALLERY =============== */
 @media screen and (min-width: 768px) {
     .gallery-grid {
@@ -1067,6 +1268,218 @@ h1, h2, h3 {
     .container {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+/* =============== SMALL MOBILE (576px) =============== */
+@media screen and (max-width: 576px) {
+    /* Section padding - reduce on mobile */
+    .section {
+        padding: 4rem 0 1.5rem;
+    }
+
+    /* Trust bar - single column */
+    .trust-logos {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .trust-logo {
+        font-size: 1.1rem;
+    }
+
+    /* Success stats - single column, centered */
+    .success-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    /* Testimonial adjustments */
+    .testimonial {
+        padding-left: 1rem;
+        font-size: 1rem;
+    }
+
+    /* Success photo */
+    .success-photo {
+        height: 300px;
+    }
+
+    /* About section - image order */
+    .about-grid {
+        gap: 1.5rem;
+    }
+
+    .about-img {
+        order: 2;
+    }
+
+    .about-data {
+        order: 1;
+    }
+
+    .about-photo {
+        height: 280px;
+    }
+
+    /* Privacy section - image order */
+    .privacy-grid {
+        gap: 1.5rem;
+    }
+
+    .privacy-img {
+        order: 2;
+    }
+
+    .privacy-data {
+        order: 1;
+    }
+
+    .privacy-photo {
+        height: 220px;
+    }
+
+    /* CTA section */
+    .cta-title {
+        font-size: 1.75rem;
+    }
+
+    .cta-description {
+        font-size: 1rem;
+    }
+
+    /* Gallery images */
+    .gallery-img {
+        height: 220px;
+    }
+
+    /* Footer - 2 column on tablet-ish, 1 on small */
+    .footer-container {
+        gap: 2rem;
+    }
+
+    .footer-description {
+        max-width: 100%;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: var(--small-size);
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    /* CTA buttons */
+    .cta-btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cta-btns .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* =============== TABLET FOOTER (768px) =============== */
+@media screen and (max-width: 768px) and (min-width: 577px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .footer-content {
+        grid-column: span 2;
+    }
+}
+
+/* =============== VERY SMALL SCREENS (480px) =============== */
+@media screen and (max-width: 480px) {
+    /* Even smaller section padding */
+    .section {
+        padding: 3rem 0 1rem;
+    }
+
+    /* Hero adjustments */
+    .hero-title {
+        font-size: 1.75rem;
+        line-height: 1.2;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    /* Section titles */
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* CTA even smaller */
+    .cta-title {
+        font-size: 1.5rem;
+    }
+
+    .cta-container {
+        padding: 2.5rem 0;
+    }
+
+    /* Feature cards */
+    .feature-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Gallery */
+    .gallery-img {
+        height: 200px;
+    }
+
+    /* Container margins */
+    .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    /* Trust text */
+    .trust-text {
+        font-size: var(--smaller-size);
+        letter-spacing: 1px;
+    }
+
+    /* Problem/Solution items */
+    .ps-item {
+        gap: 0.75rem;
+    }
+
+    .ps-item p {
+        font-size: var(--small-size);
     }
 }
 

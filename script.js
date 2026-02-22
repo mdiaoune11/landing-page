@@ -13,6 +13,7 @@ const translations = {
         'nav.success': 'Success Stories',
         'nav.recruit': 'Recruit Now',
         'nav.news': 'News',
+        'nav.faq': 'FAQ',
         'nav.contact': 'Contact',
         'nav.login': 'Log In',
         'nav.signup': 'Sign Up',
@@ -83,8 +84,65 @@ const translations = {
         'footer.aboutUs': 'About Us',
         'footer.contact': 'Contact',
         'footer.privacyPolicy': 'Privacy Policy',
+        'footer.faq': 'FAQ',
         'footer.followUs': 'Follow Us',
-        'footer.copyright': '© 2025 Meta Africa Sports. All rights reserved. FIBA Licensed Agent.'
+        'footer.copyright': '© 2025 Meta Africa Sports. All rights reserved. FIBA Licensed Agent.',
+        // FAQ
+        'faq.title': 'Recruitment Process FAQ',
+        'faq.intro': 'This page is for recruiters, coaches, and families. It outlines how international recruitment (Africa to the US) and recruitment within the US work, step by step.',
+        'faq.internationalTitle': 'International: Africa to US',
+        'faq.withinUSTitle': 'Within the US',
+        'faq.int.phase1Title': '1. Documents and eligibility',
+        'faq.int.phase1Intro': 'The player and family gather identity and academic documents.',
+        'faq.int.phase2Title': '2. School placement',
+        'faq.int.phase2Intro': 'The recruiter or program helps secure a US school placement; the school will later issue the I-20 (Certificate of Eligibility for F-1 student status).',
+        'faq.int.phase3Title': '3. Visa process',
+        'faq.int.phase3Intro': 'After the school issues the I-20, the student completes the visa application and interview.',
+        'faq.int.phase4Title': '4. Travel',
+        'faq.int.phase4Intro': 'Once the visa is approved, the student books travel and can enter the US up to 30 days before the program start.',
+        'faq.int.termI20Label': 'I-20:',
+        'faq.int.termI20': 'Certificate of Eligibility for F-1 student status; issued by the US school after admission.',
+        'faq.int.termSevisLabel': 'SEVIS fee:',
+        'faq.int.termSevis': 'I-901 fee paid to the US government (e.g. $350 for F-1); required before the visa interview.',
+        'faq.int.termDs160Label': 'DS-160:',
+        'faq.int.termDs160': 'Online nonimmigrant visa application form; must be completed and the confirmation page printed before the interview.',
+        'faq.int.documentsHeading': 'Documents to bring to the visa interview',
+        'faq.int.docPassport': 'Valid passport',
+        'faq.int.docI20': 'I-20 form',
+        'faq.int.docDs160': 'DS-160 confirmation page',
+        'faq.int.docSevis': 'SEVIS fee receipt',
+        'faq.int.docFinancial': 'Proof of financial support',
+        'faq.int.docAdmission': 'Admission letter',
+        'faq.int.docTranscripts': 'Academic transcripts',
+        'faq.int.timingHeading': 'Timing and rules',
+        'faq.int.ncaaHeading': 'For NCAA student-athletes',
+        'faq.us.intro': 'For players already in the United States, transfer eligibility is managed between the current school, the new school, and the guardian.',
+        'faq.us.expectHeading': 'What to expect',
+        'faq.int.step1': 'Birth certificate',
+        'faq.int.step2': 'National certificate',
+        'faq.int.step3': 'Passport and medical',
+        'faq.int.step4': 'School application (information provided by recruiters)',
+        'faq.int.step5': 'School approval',
+        'faq.int.step6': 'Financial check of parents',
+        'faq.int.step7': 'Issue the I-20',
+        'faq.int.step8': 'Visa application',
+        'faq.int.step9': 'Schedule visa appointment',
+        'faq.int.step10': 'Interview preparation',
+        'faq.int.step11': 'Visa interview',
+        'faq.int.step12': 'Approval or denial',
+        'faq.int.step13': 'Book flight',
+        'faq.int.step14': 'Arrival in the US',
+        'faq.int.tipsTitle': 'Good to know',
+        'faq.int.sevis': 'Pay the SEVIS I-901 fee (e.g. $350 for F-1) at least 3 business days before the visa interview; payment is required before the interview.',
+        'faq.int.ds160': 'Complete the DS-160 nonimmigrant visa application online and pay the visa (MRV) application fee before scheduling your appointment. Print your confirmation page.',
+        'faq.int.documentsAtInterview': 'Documents to bring to the visa interview: valid passport, I-20, DS-160 confirmation, SEVIS fee receipt, proof of financial support, admission letter, and academic transcripts.',
+        'faq.int.entryRule': 'The student may enter the US up to 30 days before the program start date. The F-1 visa can be issued up to 365 days before the program begins.',
+        'faq.int.ncaaNote': 'For NCAA eligibility: international student-athletes should register with the NCAA Eligibility Center and submit certified academic documents (e.g. proof of graduation, transcripts from year 9 onward in native language plus certified English translations) from the school\'s official email—not from students or recruiters.',
+        'faq.us.step1': 'Establish contact with guardian',
+        'faq.us.step2': 'Agreement of transfer',
+        'faq.us.step3': 'Send transfer document',
+        'faq.us.step4': 'Sign document',
+        'faq.us.stateNote': 'Transfer eligibility is governed by state associations (e.g. CIF, IHSA, VHSL, UHSAA). Review typically takes 4–6 weeks. Have documentation of residence and, if relevant, court orders for custody changes ready.'
     },
     fr: {
         // Navigation
@@ -93,8 +151,10 @@ const translations = {
         'nav.players': 'Joueurs',
         'nav.reports': 'Rapports',
         'nav.success': 'Réussites',
+        'nav.join': 'S\'inscrire',
         'nav.recruit': 'Recruter',
         'nav.news': 'Actualités',
+        'nav.faq': 'FAQ',
         'nav.contact': 'Contact',
         'nav.login': 'Connexion',
         'nav.signup': 'S\'inscrire',
@@ -102,6 +162,8 @@ const translations = {
         'hero.title': 'La Passerelle Vers les Futures Stars du Basketball Africain.',
         'hero.description': 'Rapports de scouting vérifiés et films de jeu sélectionnés sur les talents africains émergents – conçus pour les entraîneurs qui refusent de rater la prochaine grande recrue.',
         'hero.cta': 'Accéder au Scouting',
+        'hero.ctaRecruiter': 'Recruter des Talents',
+        'hero.ctaPlayer': 'Être Scouté',
         'hero.secondary': 'En Savoir Plus',
         // Trust
         'trust.title': 'LA CONFIANCE DES ENTRAÎNEURS DU MONDE ENTIER',
@@ -149,7 +211,7 @@ const translations = {
         'gallery.title': 'Des Yeux sur le Terrain',
         // CTA
         'cta.title': 'Commentaires & Partenariats',
-        'cta.description': 'Nous cherchons toujours à élargir notre réseau. Contactez-nous pour des demandes de partenariat ou pour partager vos commentaires sur notre mission.',
+        'cta.description': 'Nous cherchons toujours à élargir notre réseau de joueurs et de recruteurs. Contactez-nous pour des demandes de partenariat ou pour partager vos commentaires sur notre mission.',
         'cta.button': 'Envoyez-nous un Email',
         // Privacy
         'privacy.title': 'Politique de Confidentialité',
@@ -165,8 +227,65 @@ const translations = {
         'footer.aboutUs': 'À Propos',
         'footer.contact': 'Contact',
         'footer.privacyPolicy': 'Politique de Confidentialité',
+        'footer.faq': 'FAQ',
         'footer.followUs': 'Suivez-nous',
-        'footer.copyright': '© 2025 Meta Africa Sports. Tous droits réservés. Agent Licencié FIBA.'
+        'footer.copyright': '© 2025 Meta Africa Sports. Tous droits réservés. Agent Licencié FIBA.',
+        // FAQ
+        'faq.title': 'FAQ Processus de Recrutement',
+        'faq.intro': 'Cette page s\'adresse aux recruteurs, entraîneurs et familles. Elle décrit étape par étape le recrutement international (Afrique vers États-Unis) et le recrutement aux États-Unis.',
+        'faq.internationalTitle': 'International : Afrique vers États-Unis',
+        'faq.withinUSTitle': 'Aux États-Unis',
+        'faq.int.phase1Title': '1. Documents et éligibilité',
+        'faq.int.phase1Intro': 'Le joueur et la famille rassemblent les documents d\'identité et académiques.',
+        'faq.int.phase2Title': '2. Placement scolaire',
+        'faq.int.phase2Intro': 'Le recruteur ou le programme aide à obtenir une place dans une école américaine ; l\'école délivrera ensuite le I-20 (Certificat d\'éligibilité au statut étudiant F-1).',
+        'faq.int.phase3Title': '3. Processus de visa',
+        'faq.int.phase3Intro': 'Après l\'émission du I-20 par l\'école, l\'étudiant complète la demande de visa et passe l\'entretien.',
+        'faq.int.phase4Title': '4. Voyage',
+        'faq.int.phase4Intro': 'Une fois le visa approuvé, l\'étudiant réserve le voyage et peut entrer aux États-Unis jusqu\'à 30 jours avant le début du programme.',
+        'faq.int.termI20Label': 'I-20 :',
+        'faq.int.termI20': 'Certificat d\'éligibilité au statut étudiant F-1 ; délivré par l\'école américaine après l\'admission.',
+        'faq.int.termSevisLabel': 'Frais SEVIS :',
+        'faq.int.termSevis': 'Frais I-901 payés au gouvernement américain (p. ex. 350 $ pour F-1) ; obligatoires avant l\'entretien de visa.',
+        'faq.int.termDs160Label': 'DS-160 :',
+        'faq.int.termDs160': 'Formulaire de demande de visa en ligne ; doit être rempli et la page de confirmation imprimée avant l\'entretien.',
+        'faq.int.documentsHeading': 'Documents à apporter à l\'entretien de visa',
+        'faq.int.docPassport': 'Passeport valide',
+        'faq.int.docI20': 'Formulaire I-20',
+        'faq.int.docDs160': 'Page de confirmation DS-160',
+        'faq.int.docSevis': 'Reçu des frais SEVIS',
+        'faq.int.docFinancial': 'Preuve de soutien financier',
+        'faq.int.docAdmission': 'Lettre d\'admission',
+        'faq.int.docTranscripts': 'Relevés de notes',
+        'faq.int.timingHeading': 'Délais et règles',
+        'faq.int.ncaaHeading': 'Pour les athlètes-étudiants NCAA',
+        'faq.us.intro': 'Pour les joueurs déjà aux États-Unis, l\'éligibilité au transfert est gérée entre l\'école actuelle, la nouvelle école et le tuteur.',
+        'faq.us.expectHeading': 'À quoi s\'attendre',
+        'faq.int.step1': 'Acte de naissance',
+        'faq.int.step2': 'Certificat national',
+        'faq.int.step3': 'Passeport et examen médical',
+        'faq.int.step4': 'Candidature scolaire (informations fournies par les recruteurs)',
+        'faq.int.step5': 'Approbation de l\'école',
+        'faq.int.step6': 'Vérification financière des parents',
+        'faq.int.step7': 'Émission du I-20',
+        'faq.int.step8': 'Demande de visa',
+        'faq.int.step9': 'Prise de rendez-vous pour le visa',
+        'faq.int.step10': 'Préparation à l\'entretien',
+        'faq.int.step11': 'Entretien pour le visa',
+        'faq.int.step12': 'Approbation ou refus',
+        'faq.int.step13': 'Réservation du vol',
+        'faq.int.step14': 'Arrivée aux États-Unis',
+        'faq.int.tipsTitle': 'À savoir',
+        'faq.int.sevis': 'Payer les frais SEVIS I-901 (p. ex. 350 $ pour F-1) au moins 3 jours ouvrables avant l\'entretien ; le paiement est obligatoire avant l\'entretien.',
+        'faq.int.ds160': 'Remplir la demande de visa DS-160 en ligne et payer les frais de demande de visa (MRV) avant de prendre rendez-vous. Imprimer la page de confirmation.',
+        'faq.int.documentsAtInterview': 'Documents à apporter à l\'entretien : passeport valide, I-20, confirmation DS-160, reçu des frais SEVIS, preuve de soutien financier, lettre d\'admission et relevés de notes.',
+        'faq.int.entryRule': 'L\'étudiant peut entrer aux États-Unis jusqu\'à 30 jours avant le début du programme. Le visa F-1 peut être délivré jusqu\'à 365 jours avant le début du programme.',
+        'faq.int.ncaaNote': 'Pour l\'éligibilité NCAA : les athlètes-étudiants internationaux doivent s\'inscrire au NCAA Eligibility Center et soumettre les documents académiques certifiés (p. ex. preuve de diplôme, relevés à partir de la 9e année dans la langue d\'origine plus traductions anglaises certifiées) depuis l\'email officiel de l\'école—pas par les étudiants ou recruteurs.',
+        'faq.us.step1': 'Établir le contact avec le tuteur',
+        'faq.us.step2': 'Accord de transfert',
+        'faq.us.step3': 'Envoi du document de transfert',
+        'faq.us.step4': 'Signature du document',
+        'faq.us.stateNote': 'L\'éligibilité au transfert est régie par les associations d\'État (p. ex. CIF, IHSA, VHSL, UHSAA). L\'examen prend généralement 4 à 6 semaines. Ayez à disposition la documentation de résidence et, le cas échéant, les décisions de justice pour les changements de garde.'
     },
     es: {
         // Navigation
@@ -175,8 +294,10 @@ const translations = {
         'nav.players': 'Jugadores',
         'nav.reports': 'Informes',
         'nav.success': 'Éxitos',
+        'nav.join': 'Unirse',
         'nav.recruit': 'Reclutar',
         'nav.news': 'Noticias',
+        'nav.faq': 'FAQ',
         'nav.contact': 'Contacto',
         'nav.login': 'Iniciar Sesión',
         'nav.signup': 'Registrarse',
@@ -184,6 +305,8 @@ const translations = {
         'hero.title': 'La Puerta de Entrada a las Próximas Estrellas del Baloncesto Africano.',
         'hero.description': 'Informes de scouting verificados y películas de juego seleccionadas sobre el talento africano emergente – diseñados para entrenadores que se niegan a perderse el próximo gran recluta.',
         'hero.cta': 'Acceder al Scouting',
+        'hero.ctaRecruiter': 'Reclutar Talento',
+        'hero.ctaPlayer': 'Ser Reclutado',
         'hero.secondary': 'Saber Más',
         // Trust
         'trust.title': 'CONFIANZA DE ENTRENADORES DE TODO EL MUNDO',
@@ -231,7 +354,7 @@ const translations = {
         'gallery.title': 'Ojos en el Terreno',
         // CTA
         'cta.title': 'Comentarios y Asociaciones',
-        'cta.description': 'Siempre estamos buscando expandir nuestra red. Contáctanos para consultas de asociación o para compartir tus comentarios sobre nuestra misión.',
+        'cta.description': 'Siempre estamos buscando expandir nuestra red de jugadores y reclutadores. Contáctanos para consultas de asociación o para compartir tus comentarios sobre nuestra misión.',
         'cta.button': 'Envíanos un Email',
         // Privacy
         'privacy.title': 'Política de Privacidad',
@@ -247,8 +370,65 @@ const translations = {
         'footer.aboutUs': 'Sobre Nosotros',
         'footer.contact': 'Contacto',
         'footer.privacyPolicy': 'Política de Privacidad',
+        'footer.faq': 'FAQ',
         'footer.followUs': 'Síguenos',
-        'footer.copyright': '© 2025 Meta Africa Sports. Todos los derechos reservados. Agente Licenciado FIBA.'
+        'footer.copyright': '© 2025 Meta Africa Sports. Todos los derechos reservados. Agente Licenciado FIBA.',
+        // FAQ
+        'faq.title': 'FAQ Proceso de Reclutamiento',
+        'faq.intro': 'Esta página es para reclutadores, entrenadores y familias. Describe paso a paso el reclutamiento internacional (África a EE. UU.) y el reclutamiento dentro de EE. UU.',
+        'faq.internationalTitle': 'Internacional: África a EE. UU.',
+        'faq.withinUSTitle': 'Dentro de EE. UU.',
+        'faq.int.phase1Title': '1. Documentos y elegibilidad',
+        'faq.int.phase1Intro': 'El jugador y la familia reúnen documentos de identidad y académicos.',
+        'faq.int.phase2Title': '2. Colocación escolar',
+        'faq.int.phase2Intro': 'El reclutador o el programa ayuda a conseguir una plaza en una escuela en EE. UU.; la escuela emitirá después el I-20 (Certificado de Elegibilidad para estatus de estudiante F-1).',
+        'faq.int.phase3Title': '3. Proceso de visa',
+        'faq.int.phase3Intro': 'Después de que la escuela emita el I-20, el estudiante completa la solicitud de visa y la entrevista.',
+        'faq.int.phase4Title': '4. Viaje',
+        'faq.int.phase4Intro': 'Una vez aprobada la visa, el estudiante reserva el viaje y puede entrar a EE. UU. hasta 30 días antes del inicio del programa.',
+        'faq.int.termI20Label': 'I-20:',
+        'faq.int.termI20': 'Certificado de Elegibilidad para estatus de estudiante F-1; emitido por la escuela en EE. UU. tras la admisión.',
+        'faq.int.termSevisLabel': 'Tarifa SEVIS:',
+        'faq.int.termSevis': 'Tarifa I-901 pagada al gobierno de EE. UU. (p. ej. $350 para F-1); obligatoria antes de la entrevista de visa.',
+        'faq.int.termDs160Label': 'DS-160:',
+        'faq.int.termDs160': 'Formulario de solicitud de visa en línea; debe completarse e imprimirse la página de confirmación antes de la entrevista.',
+        'faq.int.documentsHeading': 'Documentos para la entrevista de visa',
+        'faq.int.docPassport': 'Pasaporte válido',
+        'faq.int.docI20': 'Formulario I-20',
+        'faq.int.docDs160': 'Página de confirmación DS-160',
+        'faq.int.docSevis': 'Recibo de tarifa SEVIS',
+        'faq.int.docFinancial': 'Prueba de apoyo financiero',
+        'faq.int.docAdmission': 'Carta de admisión',
+        'faq.int.docTranscripts': 'Transcripciones académicas',
+        'faq.int.timingHeading': 'Plazos y reglas',
+        'faq.int.ncaaHeading': 'Para atletas-estudiantes NCAA',
+        'faq.us.intro': 'Para jugadores que ya están en Estados Unidos, la elegibilidad de transferencia se gestiona entre la escuela actual, la nueva escuela y el tutor.',
+        'faq.us.expectHeading': 'Qué esperar',
+        'faq.int.step1': 'Partida de nacimiento',
+        'faq.int.step2': 'Certificado nacional',
+        'faq.int.step3': 'Pasaporte y examen médico',
+        'faq.int.step4': 'Solicitud escolar (información proporcionada por reclutadores)',
+        'faq.int.step5': 'Aprobación de la escuela',
+        'faq.int.step6': 'Verificación financiera de los padres',
+        'faq.int.step7': 'Emisión del I-20',
+        'faq.int.step8': 'Solicitud de visa',
+        'faq.int.step9': 'Programar cita para la visa',
+        'faq.int.step10': 'Preparación para la entrevista',
+        'faq.int.step11': 'Entrevista de visa',
+        'faq.int.step12': 'Aprobación o denegación',
+        'faq.int.step13': 'Reservar vuelo',
+        'faq.int.step14': 'Llegada a EE. UU.',
+        'faq.int.tipsTitle': 'Buena información',
+        'faq.int.sevis': 'Pagar la tarifa SEVIS I-901 (p. ej. $350 para F-1) al menos 3 días hábiles antes de la entrevista; el pago es obligatorio antes de la entrevista.',
+        'faq.int.ds160': 'Completar la solicitud de visa DS-160 en línea y pagar la tarifa de solicitud de visa (MRV) antes de programar la cita. Imprimir la página de confirmación.',
+        'faq.int.documentsAtInterview': 'Documentos para la entrevista: pasaporte válido, I-20, confirmación DS-160, recibo de tarifa SEVIS, prueba de apoyo financiero, carta de admisión y transcripciones académicas.',
+        'faq.int.entryRule': 'El estudiante puede entrar a EE. UU. hasta 30 días antes del inicio del programa. La visa F-1 puede emitirse hasta 365 días antes del inicio del programa.',
+        'faq.int.ncaaNote': 'Para elegibilidad NCAA: los atletas-estudiantes internacionales deben registrarse en el NCAA Eligibility Center y enviar documentos académicos certificados (p. ej. prueba de graduación, transcripciones desde año 9 en idioma nativo más traducciones al inglés certificadas) desde el correo oficial de la escuela—no de estudiantes ni reclutadores.',
+        'faq.us.step1': 'Establecer contacto con el tutor',
+        'faq.us.step2': 'Acuerdo de transferencia',
+        'faq.us.step3': 'Enviar documento de transferencia',
+        'faq.us.step4': 'Firmar documento',
+        'faq.us.stateNote': 'La elegibilidad de transferencia la rigen las asociaciones estatales (p. ej. CIF, IHSA, VHSL, UHSAA). La revisión suele tardar 4–6 semanas. Ten a mano la documentación de residencia y, si aplica, las órdenes judiciales por cambios de custodia.'
     }
 };
 
@@ -380,12 +560,21 @@ async function fetchLatestNews() {
             const imagePos = article.image_position;
             const objectPositionStyle = imagePos ? `object-position: ${imagePos.x}% ${imagePos.y}%;` : '';
             
+            // Render tags
+            const tags = article.tags || [];
+            const tagsHtml = tags.length > 0 
+                ? `<div class="news-tags">
+                    ${tags.map(tag => `<span class="news-tag">${tag}</span>`).join('')}
+                   </div>`
+                : '';
+            
             return `
                 <article class="news-card">
                     <div class="news-img-container">
                         ${article.image_url ? `<img src="${article.image_url}" alt="${title.replace(/"/g, '&quot;')}" class="news-img" style="${objectPositionStyle}">` : '<i class="ri-newspaper-line" style="font-size: 3rem; color: var(--text-color-light);"></i>'}
                     </div>
                     <div class="news-data">
+                        ${tagsHtml}
                         <span class="news-date">${date}</span>
                         <h3 class="news-title">${title}</h3>
                         <p class="news-summary">${summary}</p>
@@ -409,8 +598,8 @@ async function fetchTop3Players() {
     if (!container) return;
     
     try {
-        // Fetch top 3 players by rating (highest rated, published players only)
-        const response = await fetch(`${SUPABASE_URL}/rest/v1/players?select=*&is_published=eq.true&rating=not.is.null&order=rating.desc&limit=3`, {
+        // Fetch top 3 players by rating (highest rated, published players only, excluding pro level)
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/players?select=*&is_published=eq.true&player_level=neq.pro&rating=not.is.null&order=rating.desc&limit=3`, {
             headers: {
                 'apikey': SUPABASE_ANON_KEY,
                 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`

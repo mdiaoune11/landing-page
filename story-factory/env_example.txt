@@ -1,0 +1,11 @@
+OPENAI_API_KEY=your_openai_key
+ELEVENLABS_API_KEY=your_elevenlabs_key
+ELEVENLABS_VOICE_ID=pNInz6obpgDQGcFmaJgB
+ELEVENLABS_MALE_VOICE_ID=pNInz6obpgDQGcFmaJgB
+AYRSHARE_API_KEY=your_ayrshare_key
+# Reddit is optional if using public JSON feeds, but better with API
+REDDIT_CLIENT_ID=your_reddit_client_id
+REDDIT_CLIENT_SECRET=your_reddit_secret
+FAL_KEY=your_fal_api_key
+RUNWAY_API_KEY=your_runway_api_key
+
