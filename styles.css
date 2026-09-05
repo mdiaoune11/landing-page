@@ -451,6 +451,11 @@ h1, h2, h3 {
     object-fit: contain;
 }
 
+.trust-logo img.trust-logo-wide {
+    width: 112px;
+    max-width: 100%;
+}
+
 .trust-logo:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(0,0,0,0.1);
@@ -1436,6 +1441,10 @@ h1, h2, h3 {
     .trust-logo img {
         width: 54px;
         height: 54px;
+    }
+
+    .trust-logo img.trust-logo-wide {
+        width: 106px;
     }
 
     /* Success stats - single column, centered */
