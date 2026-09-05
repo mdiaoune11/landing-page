@@ -417,7 +417,7 @@ h1, h2, h3 {
 
 .trust-logos {
     display: grid;
-    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-columns: repeat(9, minmax(0, 1fr));
     gap: 1rem;
     padding: 0.25rem 0.25rem 0.75rem;
 }
