@@ -427,10 +427,12 @@ h1, h2, h3 {
 
 .trust-logo {
     min-width: 210px;
-    min-height: 64px;
+    min-height: 112px;
     display: inline-flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 0.55rem;
     padding: 0.85rem 1.25rem;
     background: var(--white);
     border: 1px solid #eeeeee;
@@ -444,6 +446,12 @@ h1, h2, h3 {
     line-height: 1.15;
     text-transform: uppercase;
     transition: 0.3s;
+}
+
+.trust-logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
 }
 
 .trust-logo:hover {
@@ -1425,8 +1433,13 @@ h1, h2, h3 {
 
     .trust-logo {
         min-width: 190px;
-        min-height: 58px;
+        min-height: 104px;
         font-size: 0.78rem;
+    }
+
+    .trust-logo img {
+        width: 36px;
+        height: 36px;
     }
 
     /* Success stats - single column, centered */
