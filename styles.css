@@ -426,7 +426,7 @@ h1, h2, h3 {
 }
 
 .trust-logo {
-    min-width: 210px;
+    min-width: 152px;
     min-height: 112px;
     display: inline-flex;
     flex-direction: column;
@@ -1432,7 +1432,7 @@ h1, h2, h3 {
     }
 
     .trust-logo {
-        min-width: 190px;
+        min-width: 150px;
         min-height: 104px;
         font-size: 0.78rem;
     }
