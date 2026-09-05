@@ -64,6 +64,10 @@ const translations = {
         'success.countriesCovered': 'Countries Covered',
         'success.scholarships': 'In Scholarships',
         'success.testimonial': '"Meta Africa Sports is the resource I wish I had years ago. It\'s like having expert eyes on the ground in every African hotspot. The scouting reports are spot on and save us weeks of travel."',
+        // Institutions
+        'institutions.kicker': 'Recruiting Network',
+        'institutions.title': 'Where Our Talent Has Been Seen, Recruited, or Placed',
+        'institutions.description': 'Meta Africa Sports connects emerging African basketball talent with respected schools, academies, junior colleges, military institutes, and NCAA programs across the United States and beyond.',
         // Gallery
         'gallery.title': 'Eyes on the Ground',
         // CTA
@@ -207,6 +211,10 @@ const translations = {
         'success.countriesCovered': 'Pays Couverts',
         'success.scholarships': 'En Bourses',
         'success.testimonial': '"Meta Africa Sports est la ressource que j\'aurais aimé avoir il y a des années. C\'est comme avoir des yeux experts sur le terrain dans chaque hotspot africain. Les rapports de scouting sont précis et nous font économiser des semaines de voyage."',
+        // Institutions
+        'institutions.kicker': 'Réseau de recrutement',
+        'institutions.title': 'Où nos talents ont été vus, recrutés ou placés',
+        'institutions.description': 'Meta Africa Sports met en relation les talents émergents du basketball africain avec des écoles, académies, junior colleges, instituts militaires et programmes NCAA reconnus aux États-Unis et au-delà.',
         // Gallery
         'gallery.title': 'Des Yeux sur le Terrain',
         // CTA
@@ -350,6 +358,10 @@ const translations = {
         'success.countriesCovered': 'Países Cubiertos',
         'success.scholarships': 'En Becas',
         'success.testimonial': '"Meta Africa Sports es el recurso que desearía haber tenido hace años. Es como tener ojos expertos en el terreno en cada punto caliente africano. Los informes de scouting son precisos y nos ahorran semanas de viaje."',
+        // Institutions
+        'institutions.kicker': 'Red de reclutamiento',
+        'institutions.title': 'Donde nuestro talento ha sido visto, reclutado o colocado',
+        'institutions.description': 'Meta Africa Sports conecta el talento emergente del baloncesto africano con escuelas, academias, junior colleges, institutos militares y programas NCAA respetados en Estados Unidos y más allá.',
         // Gallery
         'gallery.title': 'Ojos en el Terreno',
         // CTA
